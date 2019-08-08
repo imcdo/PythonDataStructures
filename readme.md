@@ -21,22 +21,21 @@ here is a short list of useful magic methods:
 **`def __str__(self):`**
     called when using the str() method, should return the string representation of your object
 
-**`def __len__(self)`: **
+**`def __len__(self)`:**
     this method is called when you use the function `len()` on your object.  this is recomended over using
     a size method 
 
 **`def __getitem__(self, key)` and `def __setitem__(self, key, value)`:**
     This magic method allows you to use brackets on your object.  When you use brackets to access
     an object it calls __getitem__ with the key as the value in the brackets.
-    ex: `v = l[1]` is equivelent to 'v = l.__getitem__(1)`
+    ex: `v = l[1]` is equivelent to `v = l.__getitem__(1)`
 
     set item works the same whay except it is called when an = follows the brackets.  
 
-**`def __iter__(self):` **
+**`def __iter__(self):`**
     responds to the iter() function.  is used to get the iterable representation of your object.  Allows 
     for things like the unary * operator, comma seperation asignment, and for loops to act upon your object.
 
 
-**I'll be sure to post more, especially on things like generators, lambdas, and the unary * operator as I use them in my code
-quite a bit**
+**I'll be sure to post more, especially on things like generators, lambdas, and the unary * operator as I use them in my code quite a bit**
 
