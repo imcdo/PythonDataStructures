@@ -53,7 +53,8 @@ class BinarySearchTree (Container):
             
             return max(
                 get_height_recursive(node.left, height+1), 
-                get_height_recursive(node.right, height+1))
+                get_height_recursive(node.right, height+1)
+                )
             
         return get_height_recursive(self.root, 0)
 

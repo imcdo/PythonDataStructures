@@ -23,7 +23,7 @@ class my_dict:
             self.hash_table[hashval].end = curr.next
 
 
-    def get(self, key):
+    def __getitem__(self, key):
         hashval = hash(key) % len(self.hash_table)
         for k, v in self.hash_table[hashval]:
             if key == k:
