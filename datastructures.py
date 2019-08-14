@@ -214,8 +214,3 @@ def fib():
     while True:
         yield last
         last, current = current, current + last
-
-
-
-
-

@@ -28,9 +28,8 @@ here is a short list of useful magic methods:
 **`def __getitem__(self, key)` and `def __setitem__(self, key, value)`:**
     This magic method allows you to use brackets on your object.  When you use brackets to access
     an object it calls __getitem__ with the key as the value in the brackets.
-    ex: `v = l[1]` is equivelent to `v = l.__getitem__(1)`
-
-    set item works the same whay except it is called when an = follows the brackets.  
+    ex: `v = l[1]` is equivelent to `v = l.__getitem__(1)` 
+    et item works the same whay except it is called when an = follows the brackets.  
 
 **`def __iter__(self):`**
     responds to the iter() function.  is used to get the iterable representation of your object.  Allows 

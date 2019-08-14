@@ -12,7 +12,11 @@ class BinarySearchTree (Container):
         def __iter__(self):
             return iter((self.left, self.right))
         
-    
+        def __str__(self):
+            return f'node {self.value}'
+        
+        def __repr__(self):
+            return f' {repr(self.left) if self.left else ""} {self.value} {repr(self.right) if self.right else ""}'
 
     def __init__(self, *items):
         self.root = None
@@ -27,7 +31,7 @@ class BinarySearchTree (Container):
         return (node.value for node in self.inorder_traversal())
 
     def inorder_traversal(self):
-        def inorder_iter(current):
+        def inorder_iter (current):
             if current:
                 yield from inorder_iter(current.left)
                 yield current
@@ -119,3 +123,11 @@ class BinarySearchTree (Container):
 def my_print(*args, sep=' ', end='\n'):
     import sys
     sys.stdout.write(f"{sep.join(args)}{end}")
+
+def test():
+    b = BinarySearchTree(4, 7, 2, 9, -1, 32)
+    for item in b.depth_traversal():
+        my_print(str(item), end=' ')
+    my_print()
+
+test()
