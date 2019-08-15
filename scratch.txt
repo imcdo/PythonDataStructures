@@ -1,0 +1,25 @@
+                                        Put,      Get(with a priority),     
+
+linked list:                            O(1)      O(n)
+HashSet;                                O(1)      O(n)
+Heap:                                   O(log(n)) O(log(n))
+
+                                        Put:      GetSortedOrder:
+heap                                    O(log(n))  O(nlog(n))   
+bst                                     o(log(n))  O(n)
+
+queue:                                  Put                 Get
+linkedlist:                             O(1)                O(1)
+deque:                                  O(1 amertised)      O(1 amertised)
+list:                                   O(1 amertised)      O(n)
+
+
+
+
+l = [1, 2, 3]           l.append(4) - [1,2,3,4]
+array = [1, 2, 3]       [1, 2, 3. 4, -, -]
+
+l = set(l)
+
+list(), set(), dict(), tuple(),
+deque(), Queue(), PriorityQueue(), ...

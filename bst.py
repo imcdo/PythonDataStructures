@@ -120,9 +120,12 @@ class BinarySearchTree (Container):
 
         return parent
 
-def my_print(*args, sep=' ', end='\n'):
-    import sys
-    sys.stdout.write(f"{sep.join(args)}{end}")
+
+
+import sys
+def my_print(*args, sep=' ', end='\n', file=sys.stdout, flush=True):
+    file.write(f"{sep.join(args)}{end}")
+    if flush: file.flush()
 
 def test():
     b = BinarySearchTree(4, 7, 2, 9, -1, 32)

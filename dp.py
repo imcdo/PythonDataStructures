@@ -3,9 +3,9 @@ def coin_change(coins, target):
     for i in range(1, target + 1):
         choices = []
 
-        for den in coins:
-            if i-den >= 0 and cache[i-den] is not None: 
-                choices.append(cache[i-den] + 1)
+        for coin in coins:
+            if i-coin >= 0 and cache[i-coin] is not None: 
+                choices.append(cache[i-coin] + 1)
         
         if len(choices) == 0:
             cache.append(None)
@@ -15,3 +15,4 @@ def coin_change(coins, target):
 
 
 print(str(coin_change((3, 9, 17), 100)))
+ 
